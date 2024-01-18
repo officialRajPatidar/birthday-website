@@ -8,33 +8,44 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;display=swap">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
     <style>
         body {
             background: linear-gradient(90deg, #FFB6C1, #87CEEB);
             font-family: 'Catamaran', sans-serif;
         }
 
-   
-        nav {
-            background-image: url('assets/img/nav2.jpg');
-            background-size: cover;
-            background-position: center bottom;
-            width: 1519px;
-            height: 300px;
-            color: white;
-            padding: 20px;
-            margin-bottom: 4em;
-            transition: height 0.5s ease-out; /* Transition for height change */
-        }
+   nav {
+    background-image: url('assets/img/nav2.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    width: 1519px;
+    height: 300px;
+    color: white;
+    padding: 20px;
+    margin-bottom: 4em;
+    transition: height 0.5s ease-out; /* Transition for height change */
+}
 
-        .nav-link {
-            color: black;
-        }
+.nav-link {
+    color: black;
+}
+li{
 
-        .shrink {
-            height: 100px !important;
-        }
-    
+}
+.shrink {
+    height: 100px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        padding-bottom: 14rem !important; /* Add !important if needed */
+    }
+}
 
         header.masthead {
             margin-top: 4em;
@@ -90,17 +101,17 @@
     .card:hover {
         transform: scale(1.1);
     }
-        footer {
-            background-image: url('assets/img/nav2.jpg');
-    background-size: cover;
-    background-position: center bottom;
-    width: 1519px;
-    height: 100px;
-    color: white; /* Set text color to white or a color that contrasts well with your image */
-    
-            text-align: center;
-            padding: 2rem 0;
-        }
+        .footer {
+  
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-image: url('assets/img/nav2.jpg');
+   color: black;
+   text-align: center;
+   height: 100px;
+
+}
 
         .bg-circle {
             background: #FFD700;
@@ -418,38 +429,58 @@ input#click {
 }#click:checked ~ .sparkles {
   display: block;
 }
+
+
+
+
+
+
+
     </style>
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-custom "id="navbar">
-    <a style="
-    margin-left: 77em;"" class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="navbar">
+        <a  class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            
+        </div>
+<div>
         <ul class="navbar-nav">
-            <li class="nav-item ml-auto"> <!-- Add ml-auto to align to the right -->
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item ml-auto"> <!-- Add ml-auto to align to the right -->
-                <a class="nav-link" href="#gallery">Gallery</a>
-            </li>
-            <li class="nav-item ml-auto"> <!-- Add ml-auto to align to the right -->
-                <a class="nav-link" href="#message">Message</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<li class="nav-item">
+
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#message">Message</a>
+                </li>
+                <li class="nav-item">
+<audio controls autoplay>
+            <source src="assets\img\_Heeriye_64(PagalWorld.com.pe).mp3" type="audio/mpeg">
+        </audio>                </li>
+                </ul></div>
+                <div class="navbar-nav">
+       
+        </div>
+    </nav>
+
 
 
     <header class="text-center text-white masthead my-4">
+      
         <div class="masthead-content">
             <div class="container">
                 <h1 class="masthead-heading mb-0">Happy Birthday! 🎉</h1>
                 <h2 class="masthead-subheading mb-0">Wishing you a day filled with joy and laughter</h2>
-                <a class="btn btn-primary btn-xl rounded-pill mt-5" role="button" href="#Celebrate">Let's Celebrate</a>
+                <a class="btn btn-primary btn-xl rounded-pill mt-5" role="button" href="#gfit">Let's Celebrate</a>
             </div>
         </div>
         <div class="bg-circle-1 bg-circle"></div>
@@ -459,14 +490,15 @@ input#click {
     </header>
     <section style="margin-top: 8em;
     padding: 26px;
-    margin-left: 39em;
+    margin-left: 5em;
+   
 }">
         
-<div class="birthday-gift">
+<div class="birthday-gift " id="gfit">
   <div class="gift">
   <input id='click' type='checkbox'>
   <label class='click' for='click'></label>
-  <div class="wishes">Happy Birthday!</div>
+  <div class="wishes">Happy Birthday! </div>
        <div class="sparkles">
       <div class="spark1"></div>
       <div class="spark2"></div>
@@ -699,12 +731,10 @@ input#click {
 
 
   </section>
-    <footer class="py-5 bg-black">
-
-        <div class="container">
-            <p class="text-center text-white m-0 small">Copyright&nbsp;© Birthday Celebration 2024</p>
-        </div>
-    </footer>
+   
+    <div class="footer">
+  <p>Copyright&nbsp;© Birthday Celebration 2024</p>
+</div>
    
    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script>
