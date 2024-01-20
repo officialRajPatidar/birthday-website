@@ -14,45 +14,44 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 
     <style>
-        body {
+       body {
             background: linear-gradient(90deg, #FFB6C1, #87CEEB);
             font-family: 'Catamaran', sans-serif;
         }
 
-   nav {
+       nav {
     background-image: url('assets/img/nav2.jpg');
     background-size: cover;
     background-position: center bottom;
-    width: 1519px;
-    height: 300px;
     color: white;
     padding: 20px;
-    margin-bottom: 4em;
+    height: 80px;
+    position: fixed;
     transition: height 0.5s ease-out; /* Transition for height change */
 }
+        .nav-link {
+            color: black;
+        }
 
-.nav-link {
-    color: black;
-}
-li{
+        li {}
 
-}
-.shrink {
-    height: 100px !important;
-}
+        .shrink {
+            height: 60px !important;
+        }
 
-@media only screen and (max-width: 600px) {
-    nav {
-        padding-bottom: 14rem !important; /* Add !important if needed */
-    }
-}
+        @media only screen and (max-width: 600px) {
+            nav {
+                padding: 10px; /* Adjust padding for smaller screens */
+            }
+        }
+
 
         header.masthead {
-            margin-top: 4em;
+           
             background-color: #F08080;
             color: white;
             position: relative;
-            padding-top: 24rem;
+            padding-top: 14rem;
             padding-bottom: 12rem;
             text-align: center;
         }
@@ -73,7 +72,7 @@ li{
             border-color: #FFD700;
             font-size: 1.5rem;
             padding: 1rem 2rem;
-            margin-top: 2rem;
+            
             color: #fff;
         }
 
@@ -109,7 +108,7 @@ li{
    background-image: url('assets/img/nav2.jpg');
    color: black;
    text-align: center;
-   height: 100px;
+   height: 50px;
 
 }
 
@@ -438,49 +437,77 @@ input#click {
 
     </style>
 
+
+<audio id="birthdayAudio" style="z-index: 0;">
+    <source src="assets/img/music1.mp3" type="audio/mpeg" style="padding: 0;">
+</audio>
+
+<audio id="secondAudio" style="z-index: 0;">
+    <source src="assets/img/music2.mp3" type="audio/mpeg" style="padding: 0;">
+</audio>
+
+<audio id="thirdAudio" style="z-index: 0;">
+    <source src="assets/img/music3.mp3" type="audio/mpeg" style="padding: 0;">
+</audio>
+
+<script>
+    function playAudio(audioId) {
+        var audio = document.getElementById(audioId);
+
+        // Pause all other audio elements
+        var allAudioElements = document.querySelectorAll('audio');
+        allAudioElements.forEach(function (element) {
+            if (element.id !== audioId) {
+                element.pause();
+            }
+        });
+
+        // Toggle play/pause for the selected audio element
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+</script>
+
+    
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="navbar">
-        <a  class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            
-        </div>
-<div>
-        <ul class="navbar-nav">
-<li class="nav-item">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+        <a class="nav-link text-white"" href="#gallery">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link text-white" href="#gallery">Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white"" href="#message">Message</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+    <!--  -->
 
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#gallery">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#message">Message</a>
-                </li>
-                <li class="nav-item">
-<audio controls autoplay>
-            <source src="assets\img\_Heeriye_64(PagalWorld.com.pe).mp3" type="audio/mpeg">
-        </audio>                </li>
-                </ul></div>
-                <div class="navbar-nav">
-       
-        </div>
-    </nav>
-
-
-
-    <header class="text-center text-white masthead my-4">
+    <header class="text-center text-white masthead ">
       
         <div class="masthead-content">
             <div class="container">
                 <h1 class="masthead-heading mb-0">Happy Birthday! 🎉</h1>
                 <h2 class="masthead-subheading mb-0">Wishing you a day filled with joy and laughter</h2>
-                <a class="btn btn-primary btn-xl rounded-pill mt-5" role="button" href="#gfit">Let's Celebrate</a>
+               <a class="btn btn-primary btn-xl rounded-pill mt-5" role="button" href="#gfit" onclick="playAudio('birthdayAudio')">Play Track</a>
+
+                <a class="btn btn-primary btn-xl rounded-pill mt-5" role="button" href="#gfit" onclick="playAudio('secondAudio')">Let's </a>
+
+                <a class="btn btn-primary btn-xl rounded-pill mt-5" role="button" href="#gfit" onclick="playAudio('thirdAudio')">Play Track</a>   
             </div>
         </div>
         <div class="bg-circle-1 bg-circle"></div>
